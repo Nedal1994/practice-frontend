@@ -23,7 +23,7 @@ class FavFlower extends React.Component {
         {
        console.log('hello')
         axios
-            .get(`https://practice1235.herokuapp.com/getFlower?email=${email}`)
+            .get(`http://localhost:3600/getFlower?email=${email}`)
             .then(result => {
                 this.setState({
                     flowersArr: result.data
@@ -39,7 +39,7 @@ class FavFlower extends React.Component {
         const { user } = this.props.auth0
         const email = user.email
         axios
-            .delete(`https://practice1235.herokuapp.com/deleteFlower/${id}?email=${email}`)
+            .delete(`http://localhost:3600/deleteFlower/${id}?email=${email}`)
             .then(result => {
                 this.setState({
                     flowersArr: result.data
@@ -59,7 +59,7 @@ class FavFlower extends React.Component {
             email: email
         }
         axios
-            .put(`https://practice1235.herokuapp.com/updateFlower/${this.state.flowerId}`, obj)
+            .put(`http://localhost:3600/updateFlower/${this.state.flowerId}`, obj)
             .then(result => {
                 this.setState({
                     flowersArr: result.data

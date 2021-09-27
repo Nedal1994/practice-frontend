@@ -24,7 +24,7 @@ class Main extends React.Component {
         const { user } = this.props.auth0
         const email = user.email
         axios
-          .get(`https://practice1235.herokuapp.com/flowers?email=${email}`)
+          .get(`http://localhost:3600/flowers?email=${email}`)
           .then(result => {
             this.setState({
               flowersArr: result.data
@@ -48,7 +48,7 @@ class Main extends React.Component {
           }
           console.log(obj);
           axios
-          .post('https://practice1235.herokuapp.com/addFlower' ,obj)
+          .post('http://localhost:3600/addFlower' ,obj)
           .then(result =>{
               this.setState({
                   newFlowers:result.data
