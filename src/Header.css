@@ -1,5 +1,9 @@
 a{
   color:#fff;
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
 }
 
 a:hover{
